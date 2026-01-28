@@ -80,6 +80,13 @@ app.post("/api/products", async (req, res) => {
     }
 });
 
+app.get("/version", (req, res) => {
+    res.json({
+        version: "1.1",
+        updatedAt: "2026-01-18"
+    });
+});
+
 app.use((req, res) => {
     if (req.url.startsWith("/api")) {
         res.status(404).json({ error: "Not found" });

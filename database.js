@@ -7,7 +7,7 @@ let db;
 
 async function connectDB() {
     await client.connect();
-    db = client.db(); // имя БД возьмётся из URI
+    db = client.db();
     console.log("MongoDB connected");
 }
 
